@@ -1,0 +1,327 @@
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+% Resume in Latex
+% Author : Shubham Mazumder
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{soul}
+\input{glyphtounicode}
+\usepackage[margin=0.5in]{geometry}
+
+%----------FONT OPTIONS----------
+% Sans-serif Fonts
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault,light]{inter}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage{roboto}
+% \usepackage[sfdefault,medium]{InriaSans}
+\usepackage[default]{sourcesanspro}
+
+% Serif Fonts
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% -------------------------------------
+%----------PAGE SETUP------------------
+% -------------------------------------
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{0.5pt}
+% \addtolength{\evensidemargin}{0.5pt}
+% \addtolength{\textwidth}{0.9in}
+% \addtolength{\topmargin}{-0.6in}
+% \addtolength{\textheight}{1.6in}
+
+% \addtolength{\oddsidemargin}{-.875in}
+% \addtolength{\evensidemargin}{-.875in}
+% \addtolength{\textwidth}{1.75in}
+% \addtolength{\topmargin}{-.875in}
+% \addtolength{\textheight}{1.75in}
+
+% URL style
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% ----------- Definitions -----------------------
+\def\spaceforrole{ }
+\definecolor{lightyellow}{cmyk}{0.00, 0.05, 0.20, 0.00} % Highlights
+\sethlcolor{lightyellow} % Highlights
+
+%--------------- Custom commands -----------------------
+
+\newcommand{\sectionspace}{
+\vspace{-20pt}
+}
+
+\newcommand{\subheadingtitlevspace}{
+\vspace{-3pt}
+}
+
+
+% Resume Item
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+% Titles
+\newcommand{\titleItem}[1]{
+  % \textsl{\textbf{#1}}
+  \textbf{#1}
+}
+
+
+% Highlighting
+\newcommand{\highlight}[1]{
+  \textsl{\textbf{#1}}
+  % \hl{\textsl{\textbf{#1}}}
+  % \textbf{#1}
+  % \textsl{\hl{#1}}
+}
+
+% Resume Subheading
+\newcommand{\resumeSubheading}[4]{
+  \item
+     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}l@{}l}     
+      {#1} & \titleItem{#3} | {#2} & \textit{#4}\\
+    \end{tabular*}\vspace{-10pt}
+}
+
+% \newcommand{\resumeSubheading}[4]{
+%   \item
+%     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%       \textbf{#1} & #2 \\
+%       \textit{#3} & \textit{#4} \\
+%     \end{tabular*}\vspace{-8pt}
+% }
+
+
+
+% Resume Sub-sub heading
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+% Resume Project Heading
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textit{ #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+%Resume Subheading List
+\newcommand{\resumeSubHeadingListStart}{\subheadingtitlevspace\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%Resume Item List
+\newcommand{\resumeItemListStart}{
+% \vspace{-1pt}
+\begin{itemize}}
+\newcommand{\resumeItemListEnd}{
+% \vspace{-6pt}
+\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+\begin{flushleft}
+    \textbf{\large Yashraj Nigam} \\    
+    \textit{Gurugram, HR} $|$ 
+    \textit{+91 87709 00297} $|$  
+    \href{mailto:yashrajnigam97@gmail.com}{{\textit{yashrajnigam97@gmail.com}}} $|$
+    \href{https://yashrajnigam.tech}{{\textit{yashrajnigam.tech}}} $|$
+    \href{https://linkedin.com/in/yrnigam}{{\textit{linkedin:yrnigam}}} $|$
+    \href{https://github.com/yrnigam}{{\textit{github:yrnigam}}}
+    \vspace{-8pt}
+\end{flushleft}
+\vspace{-2pt}
+% -------------------------------------
+%---------- PROFESSIONAL SUMMARY ------
+% -------------------------------------
+
+\section{Professional Summary}
+\vspace{-2pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     {Experienced Data Engineer with over 4+ years of expertise, currently employed at KPMG. Proficient in Python and skilled at analyzing structured and unstructured data. Proven track record of utilizing Data Science technologies to solve real-world problems. Committed to delivering high-quality solutions and catalyzing data-driven success for organizations.} \\      
+    }}
+ \end{itemize}
+ \sectionspace
+\vspace{6pt}
+
+
+
+% -------------------------------------
+%----------TECHNICAL SKILLS------------
+% -------------------------------------
+
+\section{Technical Skills}
+\subheadingtitlevspace
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     \titleItem{Cloud Platform}{: AWS} \\
+     \titleItem{Cloud Services}{: S3, EMR, Step functions, Glue, Lambda, SNS, Eventbridge, DataSync} \\
+     \titleItem{Databases}{: Oracle, MS-SQL, Redshift, DynamoDB, MySQL, Redis, Kafka, Elasticsearch} \\
+     \titleItem{ETL Tools}{: Talend (Open-Studio and Enterprise)} \\
+     \titleItem{Languages}{: Python, SQL, PySpark} \\
+     \titleItem{IDEs}{: Jupyter, VS Code, DBeaver , Google Colab, Databricks} \\
+     \titleItem{Version Control}{: GIT, JIRA} \\
+     \titleItem{Operating Systems}{: Linux, Windows} \\
+     \titleItem{Libraries explored}{: Boto3, BS4, OpenCV, Scikit-learn, Pandas, SpaCy, NLTK}
+    }}
+ \end{itemize}
+\sectionspace
+\vspace{5pt}
+
+
+    
+% -------------------------------------
+%----------EXPERIENCE------------------
+% -------------------------------------
+
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeProjectHeading
+           {\titleItem{{Consultant - Data Engineer}} $|$ \emph{KPMG India (Gurugram, HR)}}{November 2021 -- Present}
+           \vspace{5pt}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a configurable ingestion job that migrated 300+ tables from Oracle to a Data Lake and Data Warehouse using Talend, Glue, and Amazon S3.}
+        \resumeItem{Improved data accuracy and accessibility by designing and implementing a data pipeline using AWS Glue and PySpark.}
+        \resumeItem{Reduced data processing time from 1 hour to 20 minutes, achieving significant performance and cost improvements in data pipelines and queries.}
+        \resumeItem{Seamlessly integrated Talend with Python to enhance data ingestion efficiency for networked shared drives.}
+        \resumeItem{Proficiently curated data in data lake's curated layer using AWS Glue, DynamoDB, Step functions, and Lambda functions, demonstrating strong AWS cloud expertise.}
+        \resumeItem{Developed ETL job from scratch for data replication from Oracle DB to Oracle DB using Talend, implementing conditional checking and stored procedure calls.}
+      \resumeItemListEnd
+\vspace{5pt}
+
+    \resumeProjectHeading
+           {\titleItem{{Project Engineer - Data Science}} $|$ \emph{C-DAC (Hyderabad, TS)}}{September 2020 -- October 2021}
+      \resumeItemListStart
+        \resumeItem{Worked on a data analysis tool focused on both structured and unstructured data, encompassing over 20 modules.}
+        \resumeItem{Improved code performance using in-process parallelism and multiprocessing.}
+        \resumeItem{Enhanced language processing by implementing text transliteration, Named Entity Recognition (NER), and an offline language translation Python API using an open-source model.}
+        \resumeItem{Utilized image and video analytics techniques, including face detection, cropping, and face matching for multimedia analysis.}
+        \resumeItem{Dockerized Python code for automation and performance enhancements, streamlining deployment and scalability.}
+      \resumeItemListEnd
+\vspace{5pt}
+    \resumeProjectHeading
+           {\titleItem{{Computer Vision Engineer}} $|$ \emph{Tech Driven Basic (Indore, MP)}}{February 2020 -- August 2020}
+      \resumeItemListStart
+        \resumeItem{Trained deep learning model to automate the manual data entry work of invoices information.}
+        \resumeItem{Created a system for multi-object detection in images using SSD and Faster R-CNN.}
+        \resumeItem{Extracted invoice information through OCR, storing data in CSV files and databases.}
+        \resumeItem{Utilized LabelImg for image annotation, Pytesseract for OCR, and Regular Expressions for data processing.}
+        \resumeItem{Leveraged the power of Google Colab, along with OpenCV and TensorFlow, to accurately detect multiple objects in images.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% -------------------------------------
+%----------EDUCATION-------------------
+% -------------------------------------
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {DAVV, Indore}{GPA: 8.2/10.0}
+      {MBA in Business Analytics and Data Science}{2018 -- 2020} 
+    \resumeSubheading
+      {RGPV, Bhopal}{GPA: 7.3/10.0}
+      {BE in Computer Science Engineering}{2014 -- 2018}
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+
+\section{Awards and Certifications}
+ \vspace{-1pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\titleItem{Super Employee and Rising Star} \emph{ $|$ KPMG, India}}{April 2022 and February 2023}
+      \resumeProjectHeading
+          {\titleItem{Exceptional Performer} \emph{ $|$ CDAC Hyderabad}}{April 2021}
+      \resumeProjectHeading
+          {\titleItem{Arctic Code Vault Contributor} \emph{$|$ GitHub}}{April 2020}
+    \resumeSubHeadingListEnd
+
+
+
+
+% -------------------------------------
+%----------PROJECTS--------------------
+% -------------------------------------
+
+ \section{Projects}    
+     \resumeSubHeadingListStart
+        \resumeProjectHeading
+           {\titleItem{Project 1}}{Nov 2023}
+            \resumeItemListStart
+            \resumeItem{In cursus turpis massa tincidunt dui. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Suspendisse potenti nullam ac tortor. }
+            \resumeItem{Ut consequat semper viverra nam libero justo laoreet sit amet. Feugiat nisl pretium fusce id velit ut tortor pretium.}
+           \resumeItemListEnd
+       \resumeProjectHeading
+           {\titleItem{Project 2}}{Spring 2022}
+            \resumeItemListStart
+            \resumeItem{Ut consequat semper viverra nam libero justo laoreet sit amet. Feugiat nisl pretium fusce id velit ut tortor pretium.} 
+            \resumeItem{In cursus turpis massa tincidunt dui. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Suspendisse potenti nullam ac tortor. }
+           \resumeItemListEnd
+       \resumeProjectHeading
+           {\titleItem{Project 3}}{November 2021}
+            \resumeItemListStart
+            \resumeItem{In cursus turpis massa tincidunt dui. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Suspendisse potenti nullam ac tortor. }
+           \resumeItemListEnd
+     \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
